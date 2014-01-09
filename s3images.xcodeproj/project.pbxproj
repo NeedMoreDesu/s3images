@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF4E302099E74E1394E20AA0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92FBA7D15FAD4521A3BD9172 /* libPods.a */; };
 		D7CD81B8187EF1B100BA4CE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7CD81B7187EF1B100BA4CE1 /* Foundation.framework */; };
 		D7CD81BA187EF1B100BA4CE1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7CD81B9187EF1B100BA4CE1 /* CoreGraphics.framework */; };
 		D7CD81BC187EF1B100BA4CE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7CD81BB187EF1B100BA4CE1 /* UIKit.framework */; };
@@ -21,6 +22,9 @@
 		D7CD81D9187EF1B100BA4CE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7CD81BB187EF1B100BA4CE1 /* UIKit.framework */; };
 		D7CD81E1187EF1B100BA4CE1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7CD81DF187EF1B100BA4CE1 /* InfoPlist.strings */; };
 		D7CD81E3187EF1B100BA4CE1 /* s3imagesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D7CD81E2187EF1B100BA4CE1 /* s3imagesTests.m */; };
+		D7CD81F5187EFB2600BA4CE1 /* NSArray+Func.m in Sources */ = {isa = PBXBuildFile; fileRef = D7CD81F4187EFB2600BA4CE1 /* NSArray+Func.m */; };
+		D7CD81F8187F0ADC00BA4CE1 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7CD81F6187F0ADC00BA4CE1 /* Model.xcdatamodeld */; };
+		D7CD81FB187F122D00BA4CE1 /* UnsavedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D7CD81FA187F122D00BA4CE1 /* UnsavedImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		92FBA7D15FAD4521A3BD9172 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD40242EECC34E87927FB801 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		D7CD81B4187EF1B100BA4CE1 /* s3images.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = s3images.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7CD81B7187EF1B100BA4CE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D7CD81B9187EF1B100BA4CE1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +59,11 @@
 		D7CD81DE187EF1B100BA4CE1 /* s3imagesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "s3imagesTests-Info.plist"; sourceTree = "<group>"; };
 		D7CD81E0187EF1B100BA4CE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D7CD81E2187EF1B100BA4CE1 /* s3imagesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = s3imagesTests.m; sourceTree = "<group>"; };
+		D7CD81F3187EFB2600BA4CE1 /* NSArray+Func.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Func.h"; sourceTree = "<group>"; };
+		D7CD81F4187EFB2600BA4CE1 /* NSArray+Func.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Func.m"; sourceTree = "<group>"; };
+		D7CD81F7187F0ADC00BA4CE1 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		D7CD81F9187F122D00BA4CE1 /* UnsavedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnsavedImage.h; sourceTree = "<group>"; };
+		D7CD81FA187F122D00BA4CE1 /* UnsavedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnsavedImage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +74,7 @@
 				D7CD81BA187EF1B100BA4CE1 /* CoreGraphics.framework in Frameworks */,
 				D7CD81BC187EF1B100BA4CE1 /* UIKit.framework in Frameworks */,
 				D7CD81B8187EF1B100BA4CE1 /* Foundation.framework in Frameworks */,
+				AF4E302099E74E1394E20AA0 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +98,7 @@
 				D7CD81DC187EF1B100BA4CE1 /* s3imagesTests */,
 				D7CD81B6187EF1B100BA4CE1 /* Frameworks */,
 				D7CD81B5187EF1B100BA4CE1 /* Products */,
+				CD40242EECC34E87927FB801 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +118,7 @@
 				D7CD81B9187EF1B100BA4CE1 /* CoreGraphics.framework */,
 				D7CD81BB187EF1B100BA4CE1 /* UIKit.framework */,
 				D7CD81D6187EF1B100BA4CE1 /* XCTest.framework */,
+				92FBA7D15FAD4521A3BD9172 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,11 +126,10 @@
 		D7CD81BD187EF1B100BA4CE1 /* s3images */ = {
 			isa = PBXGroup;
 			children = (
-				D7CD81C6187EF1B100BA4CE1 /* AppDelegate.h */,
-				D7CD81C7187EF1B100BA4CE1 /* AppDelegate.m */,
-				D7CD81C9187EF1B100BA4CE1 /* Main.storyboard */,
-				D7CD81CC187EF1B100BA4CE1 /* ViewController.h */,
-				D7CD81CD187EF1B100BA4CE1 /* ViewController.m */,
+				D7CD81EF187EFA9500BA4CE1 /* Additional */,
+				D7CD81EC187EF23E00BA4CE1 /* Model */,
+				D7CD81ED187EF24700BA4CE1 /* View */,
+				D7CD81EE187EF24E00BA4CE1 /* Controller */,
 				D7CD81CF187EF1B100BA4CE1 /* Images.xcassets */,
 				D7CD81BE187EF1B100BA4CE1 /* Supporting Files */,
 			);
@@ -152,6 +165,44 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D7CD81EC187EF23E00BA4CE1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D7CD81F6187F0ADC00BA4CE1 /* Model.xcdatamodeld */,
+				D7CD81F9187F122D00BA4CE1 /* UnsavedImage.h */,
+				D7CD81FA187F122D00BA4CE1 /* UnsavedImage.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D7CD81ED187EF24700BA4CE1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D7CD81C9187EF1B100BA4CE1 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D7CD81EE187EF24E00BA4CE1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D7CD81C6187EF1B100BA4CE1 /* AppDelegate.h */,
+				D7CD81C7187EF1B100BA4CE1 /* AppDelegate.m */,
+				D7CD81CC187EF1B100BA4CE1 /* ViewController.h */,
+				D7CD81CD187EF1B100BA4CE1 /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D7CD81EF187EFA9500BA4CE1 /* Additional */ = {
+			isa = PBXGroup;
+			children = (
+				D7CD81F3187EFB2600BA4CE1 /* NSArray+Func.h */,
+				D7CD81F4187EFB2600BA4CE1 /* NSArray+Func.m */,
+			);
+			name = Additional;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +210,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7CD81E6187EF1B100BA4CE1 /* Build configuration list for PBXNativeTarget "s3images" */;
 			buildPhases = (
+				068AD7AA307B4403B3F7D08B /* Check Pods Manifest.lock */,
 				D7CD81B0187EF1B100BA4CE1 /* Sources */,
 				D7CD81B1187EF1B100BA4CE1 /* Frameworks */,
 				D7CD81B2187EF1B100BA4CE1 /* Resources */,
+				C198354C93404C6AA2D15E37 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,12 +297,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		068AD7AA307B4403B3F7D08B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C198354C93404C6AA2D15E37 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D7CD81B0187EF1B100BA4CE1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7CD81FB187F122D00BA4CE1 /* UnsavedImage.m in Sources */,
+				D7CD81F5187EFB2600BA4CE1 /* NSArray+Func.m in Sources */,
 				D7CD81CE187EF1B100BA4CE1 /* ViewController.m in Sources */,
+				D7CD81F8187F0ADC00BA4CE1 /* Model.xcdatamodeld in Sources */,
 				D7CD81C8187EF1B100BA4CE1 /* AppDelegate.m in Sources */,
 				D7CD81C4187EF1B100BA4CE1 /* main.m in Sources */,
 			);
@@ -375,6 +464,7 @@
 		};
 		D7CD81E7187EF1B100BA4CE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD40242EECC34E87927FB801 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -388,6 +478,7 @@
 		};
 		D7CD81E8187EF1B100BA4CE1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD40242EECC34E87927FB801 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -460,6 +551,7 @@
 				D7CD81E8187EF1B100BA4CE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D7CD81E9187EF1B100BA4CE1 /* Build configuration list for PBXNativeTarget "s3imagesTests" */ = {
 			isa = XCConfigurationList;
@@ -468,8 +560,22 @@
 				D7CD81EB187EF1B100BA4CE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D7CD81F6187F0ADC00BA4CE1 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D7CD81F7187F0ADC00BA4CE1 /* Model.xcdatamodel */,
+			);
+			currentVersion = D7CD81F7187F0ADC00BA4CE1 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D7CD81AC187EF1B100BA4CE1 /* Project object */;
 }

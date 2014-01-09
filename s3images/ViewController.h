@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ELCImagePickerController/ELCImagePickerController.h>
 
 @interface ViewController : UIViewController
+<ELCImagePickerControllerDelegate>
 
 @end
