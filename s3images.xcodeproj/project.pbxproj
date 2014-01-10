@@ -12,9 +12,9 @@
 		D7B565BC187FD4F40094B4F1 /* NSManagedObjectContext+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B565BA187FD4F40094B4F1 /* NSManagedObjectContext+Helpers.m */; };
 		D7B565BF187FD50C0094B4F1 /* CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B565BE187FD50C0094B4F1 /* CoreData.m */; };
 		D7B565C2187FD99E0094B4F1 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B565C1187FD99E0094B4F1 /* Constants.m */; };
-		D7B565C9187FDDB90094B4F1 /* AWSRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B565C7187FDDB90094B4F1 /* AWSRuntime.framework */; };
-		D7B565CA187FDDB90094B4F1 /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B565C8187FDDB90094B4F1 /* AWSS3.framework */; };
 		D7B565CD187FDE730094B4F1 /* UnsavedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B565CC187FDE730094B4F1 /* UnsavedImage.m */; };
+		D7B565D0188005A00094B4F1 /* AWSRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B565CE188005A00094B4F1 /* AWSRuntime.framework */; };
+		D7B565D1188005A00094B4F1 /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B565CF188005A00094B4F1 /* AWSS3.framework */; };
 		D7CD81B8187EF1B100BA4CE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7CD81B7187EF1B100BA4CE1 /* Foundation.framework */; };
 		D7CD81BA187EF1B100BA4CE1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7CD81B9187EF1B100BA4CE1 /* CoreGraphics.framework */; };
 		D7CD81BC187EF1B100BA4CE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7CD81BB187EF1B100BA4CE1 /* UIKit.framework */; };
@@ -58,6 +58,8 @@
 		D7B565C8187FDDB90094B4F1 /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSS3.framework; path = "../../../Downloads/aws-ios-sdk-1.7.1/AWSS3.framework"; sourceTree = "<group>"; };
 		D7B565CB187FDE730094B4F1 /* UnsavedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnsavedImage.h; sourceTree = "<group>"; };
 		D7B565CC187FDE730094B4F1 /* UnsavedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnsavedImage.m; sourceTree = "<group>"; };
+		D7B565CE188005A00094B4F1 /* AWSRuntime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSRuntime.framework; sourceTree = "<group>"; };
+		D7B565CF188005A00094B4F1 /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSS3.framework; sourceTree = "<group>"; };
 		D7CD81B4187EF1B100BA4CE1 /* s3images.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = s3images.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7CD81B7187EF1B100BA4CE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D7CD81B9187EF1B100BA4CE1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -87,8 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7B565C9187FDDB90094B4F1 /* AWSRuntime.framework in Frameworks */,
-				D7B565CA187FDDB90094B4F1 /* AWSS3.framework in Frameworks */,
+				D7B565D0188005A00094B4F1 /* AWSRuntime.framework in Frameworks */,
+				D7B565D1188005A00094B4F1 /* AWSS3.framework in Frameworks */,
 				D7CD81BA187EF1B100BA4CE1 /* CoreGraphics.framework in Frameworks */,
 				D7CD81BC187EF1B100BA4CE1 /* UIKit.framework in Frameworks */,
 				D7CD81B8187EF1B100BA4CE1 /* Foundation.framework in Frameworks */,
@@ -132,6 +134,8 @@
 		D7CD81B6187EF1B100BA4CE1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D7B565CE188005A00094B4F1 /* AWSRuntime.framework */,
+				D7B565CF188005A00094B4F1 /* AWSS3.framework */,
 				D7B565C7187FDDB90094B4F1 /* AWSRuntime.framework */,
 				D7B565C8187FDDB90094B4F1 /* AWSS3.framework */,
 				D7CD81B7187EF1B100BA4CE1 /* Foundation.framework */,
@@ -501,8 +505,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/dev/Downloads/aws-ios-sdk-1.7.1",
+					"./**",
+					/Users/dev/Documents/end06/s3images,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "s3images/s3images-Prefix.pch";
@@ -519,8 +523,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/dev/Downloads/aws-ios-sdk-1.7.1",
+					"./**",
+					/Users/dev/Documents/end06/s3images,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "s3images/s3images-Prefix.pch";
