@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <ELCImagePickerController/ELCImagePickerController.h>
+#import <AWSS3/AWSS3.h>
 
 @interface ViewController : UIViewController
 <ELCImagePickerControllerDelegate>
+{
+    __block ViewController *blockSelf;
+}
+
+@property (nonatomic, retain) AmazonS3Client *s3;
 
 @end

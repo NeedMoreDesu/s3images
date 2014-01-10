@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		AF4E302099E74E1394E20AA0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92FBA7D15FAD4521A3BD9172 /* libPods.a */; };
+		D7B565BB187FD4F40094B4F1 /* NSManagedObject+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B565B8187FD4F40094B4F1 /* NSManagedObject+Helpers.m */; };
+		D7B565BC187FD4F40094B4F1 /* NSManagedObjectContext+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B565BA187FD4F40094B4F1 /* NSManagedObjectContext+Helpers.m */; };
+		D7B565BF187FD50C0094B4F1 /* CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B565BE187FD50C0094B4F1 /* CoreData.m */; };
+		D7B565C2187FD99E0094B4F1 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B565C1187FD99E0094B4F1 /* Constants.m */; };
+		D7B565C9187FDDB90094B4F1 /* AWSRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B565C7187FDDB90094B4F1 /* AWSRuntime.framework */; };
+		D7B565CA187FDDB90094B4F1 /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B565C8187FDDB90094B4F1 /* AWSS3.framework */; };
+		D7B565CD187FDE730094B4F1 /* UnsavedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B565CC187FDE730094B4F1 /* UnsavedImage.m */; };
 		D7CD81B8187EF1B100BA4CE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7CD81B7187EF1B100BA4CE1 /* Foundation.framework */; };
 		D7CD81BA187EF1B100BA4CE1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7CD81B9187EF1B100BA4CE1 /* CoreGraphics.framework */; };
 		D7CD81BC187EF1B100BA4CE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7CD81BB187EF1B100BA4CE1 /* UIKit.framework */; };
@@ -24,7 +31,6 @@
 		D7CD81E3187EF1B100BA4CE1 /* s3imagesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D7CD81E2187EF1B100BA4CE1 /* s3imagesTests.m */; };
 		D7CD81F5187EFB2600BA4CE1 /* NSArray+Func.m in Sources */ = {isa = PBXBuildFile; fileRef = D7CD81F4187EFB2600BA4CE1 /* NSArray+Func.m */; };
 		D7CD81F8187F0ADC00BA4CE1 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7CD81F6187F0ADC00BA4CE1 /* Model.xcdatamodeld */; };
-		D7CD81FB187F122D00BA4CE1 /* UnsavedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D7CD81FA187F122D00BA4CE1 /* UnsavedImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +46,18 @@
 /* Begin PBXFileReference section */
 		92FBA7D15FAD4521A3BD9172 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD40242EECC34E87927FB801 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		D7B565B7187FD4F40094B4F1 /* NSManagedObject+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+Helpers.h"; sourceTree = "<group>"; };
+		D7B565B8187FD4F40094B4F1 /* NSManagedObject+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+Helpers.m"; sourceTree = "<group>"; };
+		D7B565B9187FD4F40094B4F1 /* NSManagedObjectContext+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+Helpers.h"; sourceTree = "<group>"; };
+		D7B565BA187FD4F40094B4F1 /* NSManagedObjectContext+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+Helpers.m"; sourceTree = "<group>"; };
+		D7B565BD187FD50C0094B4F1 /* CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreData.h; sourceTree = "<group>"; };
+		D7B565BE187FD50C0094B4F1 /* CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreData.m; sourceTree = "<group>"; };
+		D7B565C0187FD99E0094B4F1 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		D7B565C1187FD99E0094B4F1 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		D7B565C7187FDDB90094B4F1 /* AWSRuntime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSRuntime.framework; path = "../../../Downloads/aws-ios-sdk-1.7.1/AWSRuntime.framework"; sourceTree = "<group>"; };
+		D7B565C8187FDDB90094B4F1 /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSS3.framework; path = "../../../Downloads/aws-ios-sdk-1.7.1/AWSS3.framework"; sourceTree = "<group>"; };
+		D7B565CB187FDE730094B4F1 /* UnsavedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnsavedImage.h; sourceTree = "<group>"; };
+		D7B565CC187FDE730094B4F1 /* UnsavedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnsavedImage.m; sourceTree = "<group>"; };
 		D7CD81B4187EF1B100BA4CE1 /* s3images.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = s3images.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7CD81B7187EF1B100BA4CE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D7CD81B9187EF1B100BA4CE1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,8 +80,6 @@
 		D7CD81F3187EFB2600BA4CE1 /* NSArray+Func.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Func.h"; sourceTree = "<group>"; };
 		D7CD81F4187EFB2600BA4CE1 /* NSArray+Func.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Func.m"; sourceTree = "<group>"; };
 		D7CD81F7187F0ADC00BA4CE1 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		D7CD81F9187F122D00BA4CE1 /* UnsavedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnsavedImage.h; sourceTree = "<group>"; };
-		D7CD81FA187F122D00BA4CE1 /* UnsavedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnsavedImage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7B565C9187FDDB90094B4F1 /* AWSRuntime.framework in Frameworks */,
+				D7B565CA187FDDB90094B4F1 /* AWSS3.framework in Frameworks */,
 				D7CD81BA187EF1B100BA4CE1 /* CoreGraphics.framework in Frameworks */,
 				D7CD81BC187EF1B100BA4CE1 /* UIKit.framework in Frameworks */,
 				D7CD81B8187EF1B100BA4CE1 /* Foundation.framework in Frameworks */,
@@ -114,6 +132,8 @@
 		D7CD81B6187EF1B100BA4CE1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D7B565C7187FDDB90094B4F1 /* AWSRuntime.framework */,
+				D7B565C8187FDDB90094B4F1 /* AWSS3.framework */,
 				D7CD81B7187EF1B100BA4CE1 /* Foundation.framework */,
 				D7CD81B9187EF1B100BA4CE1 /* CoreGraphics.framework */,
 				D7CD81BB187EF1B100BA4CE1 /* UIKit.framework */,
@@ -131,6 +151,10 @@
 				D7CD81ED187EF24700BA4CE1 /* View */,
 				D7CD81EE187EF24E00BA4CE1 /* Controller */,
 				D7CD81CF187EF1B100BA4CE1 /* Images.xcassets */,
+				D7B565C0187FD99E0094B4F1 /* Constants.h */,
+				D7B565C1187FD99E0094B4F1 /* Constants.m */,
+				D7B565BD187FD50C0094B4F1 /* CoreData.h */,
+				D7B565BE187FD50C0094B4F1 /* CoreData.m */,
 				D7CD81BE187EF1B100BA4CE1 /* Supporting Files */,
 			);
 			path = s3images;
@@ -168,9 +192,9 @@
 		D7CD81EC187EF23E00BA4CE1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D7B565CB187FDE730094B4F1 /* UnsavedImage.h */,
+				D7B565CC187FDE730094B4F1 /* UnsavedImage.m */,
 				D7CD81F6187F0ADC00BA4CE1 /* Model.xcdatamodeld */,
-				D7CD81F9187F122D00BA4CE1 /* UnsavedImage.h */,
-				D7CD81FA187F122D00BA4CE1 /* UnsavedImage.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -197,6 +221,10 @@
 		D7CD81EF187EFA9500BA4CE1 /* Additional */ = {
 			isa = PBXGroup;
 			children = (
+				D7B565B7187FD4F40094B4F1 /* NSManagedObject+Helpers.h */,
+				D7B565B8187FD4F40094B4F1 /* NSManagedObject+Helpers.m */,
+				D7B565B9187FD4F40094B4F1 /* NSManagedObjectContext+Helpers.h */,
+				D7B565BA187FD4F40094B4F1 /* NSManagedObjectContext+Helpers.m */,
 				D7CD81F3187EFB2600BA4CE1 /* NSArray+Func.h */,
 				D7CD81F4187EFB2600BA4CE1 /* NSArray+Func.m */,
 			);
@@ -335,12 +363,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7CD81FB187F122D00BA4CE1 /* UnsavedImage.m in Sources */,
 				D7CD81F5187EFB2600BA4CE1 /* NSArray+Func.m in Sources */,
 				D7CD81CE187EF1B100BA4CE1 /* ViewController.m in Sources */,
+				D7B565BB187FD4F40094B4F1 /* NSManagedObject+Helpers.m in Sources */,
 				D7CD81F8187F0ADC00BA4CE1 /* Model.xcdatamodeld in Sources */,
+				D7B565C2187FD99E0094B4F1 /* Constants.m in Sources */,
 				D7CD81C8187EF1B100BA4CE1 /* AppDelegate.m in Sources */,
+				D7B565BC187FD4F40094B4F1 /* NSManagedObjectContext+Helpers.m in Sources */,
 				D7CD81C4187EF1B100BA4CE1 /* main.m in Sources */,
+				D7B565CD187FDE730094B4F1 /* UnsavedImage.m in Sources */,
+				D7B565BF187FD50C0094B4F1 /* CoreData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +500,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/dev/Downloads/aws-ios-sdk-1.7.1",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "s3images/s3images-Prefix.pch";
 				INFOPLIST_FILE = "s3images/s3images-Info.plist";
@@ -482,6 +518,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/dev/Downloads/aws-ios-sdk-1.7.1",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "s3images/s3images-Prefix.pch";
 				INFOPLIST_FILE = "s3images/s3images-Info.plist";

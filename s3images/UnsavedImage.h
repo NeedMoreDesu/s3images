@@ -2,7 +2,7 @@
 //  UnsavedImage.h
 //  s3images
 //
-//  Created by dev on 1/9/14.
+//  Created by dev on 1/10/14.
 //  Copyright (c) 2014 dev. All rights reserved.
 //
 
@@ -12,8 +12,8 @@
 
 @interface UnsavedImage : NSManagedObject
 
-@property (nonatomic, retain) NSData * imageData;
 @property (nonatomic, retain) NSNumber * attemptsLeft;
-@property (nonatomic, retain) NSString * imageName;
+@property (nonatomic, retain) NSData * data;
+@property (nonatomic, retain) NSString * name;
 
 @end

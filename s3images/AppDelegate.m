@@ -7,12 +7,23 @@
 //
 
 #import "AppDelegate.h"
+#import <AWSRuntime/AWSRuntime.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    // Logging Control - Do NOT use logging for non-development builds.
+#ifdef DEBUG
+    [AmazonLogger verboseLogging];
+#else
+    [AmazonLogger turnLoggingOff];
+#endif
+    
+    [AmazonErrorHandler shouldNotThrowExceptions];
+    
     return YES;
 }
 							
