@@ -138,25 +138,32 @@
     void (^ imageSendAttempt) (void);
     imageSendAttempt =
     ^{
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
-        });
+        if(unsavedImage.attemptsLeft.intValue <= 0)
+        {
+            NSLog(@"Maximum number of attempts reached for %@", unsavedImage.name);
+            [[CoreData sharedInstance].backgroundMOC deleteObject:unsavedImage];
+            [[CoreData sharedInstance].backgroundMOC save: nil];
+        }
+        else
+        {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+            });
         
-        // Upload image data.  Remember to set the content type.
-        S3PutObjectRequest *por = [[S3PutObjectRequest alloc]
+
+            // Upload image data.  Remember to set the content type.
+            S3PutObjectRequest *por = [[S3PutObjectRequest alloc]
                                    initWithKey:unsavedImage.name
                                    inBucket:[Constants pictureBucket]];
-        por.contentType = @"image/jpeg";
-        por.data        = unsavedImage.data;
+            por.contentType = @"image/jpeg";
+            por.data        = unsavedImage.data;
         
-        // Put the image data into the specified s3 bucket and object.
-        S3PutObjectResponse *putObjectResponse = [self.s3 putObject:por];
-        
-        if(putObjectResponse.error != nil)
-        {
-            NSLog(@"Error: %@, name: %@, attemptsLeft: %@", putObjectResponse.error, unsavedImage.name, unsavedImage.attemptsLeft);
-            if(unsavedImage.attemptsLeft.intValue > 0)
+            // Put the image data into the specified s3 bucket and object.
+            S3PutObjectResponse *putObjectResponse = [self.s3 putObject:por];
+            
+            if(putObjectResponse.error != nil)
             {
+                NSLog(@"Error: %@, name: %@, attemptsLeft: %@", putObjectResponse.error, unsavedImage.name, unsavedImage.attemptsLeft);
                 unsavedImage.attemptsLeft = [NSNumber numberWithInt: unsavedImage.attemptsLeft.intValue - 1];
                 [[CoreData sharedInstance].backgroundMOC save: nil];
                 NSLog(@"Resending %@ with delay %@", unsavedImage.name, TIMEOUT_BETWEEN_ATTEMPTS);
@@ -164,22 +171,16 @@
             }
             else
             {
-                NSLog(@"Maximum number of attempts reached for %@", unsavedImage.name);
+                NSLog(@"The image %@ was successfully uploaded.", unsavedImage.name);
+                [blockSelf saveBrowserURL:unsavedImage.name];
                 [[CoreData sharedInstance].backgroundMOC deleteObject:unsavedImage];
                 [[CoreData sharedInstance].backgroundMOC save: nil];
             }
-        }
-        else
-        {
-            NSLog(@"The image %@ was successfully uploaded.", unsavedImage.name);
-            [blockSelf saveBrowserURL:unsavedImage.name];
-            [[CoreData sharedInstance].backgroundMOC deleteObject:unsavedImage];
-            [[CoreData sharedInstance].backgroundMOC save: nil];
-        }
         
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-        });
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+            });
+        }
     };
     if(delay)
     {

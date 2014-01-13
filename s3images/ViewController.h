@@ -10,6 +10,8 @@
 #import <ELCImagePickerController/ELCImagePickerController.h>
 #import <AWSS3/AWSS3.h>
 
+#import "UnsavedImage.h"
+
 @interface ViewController : UIViewController
 <ELCImagePickerControllerDelegate>
 {
@@ -17,5 +19,7 @@
 }
 
 @property (nonatomic, retain) AmazonS3Client *s3;
+
+- (void)sendUnsavedImage:(UnsavedImage*)unsavedImage withDelay:(NSNumber*)delay;
 
 @end

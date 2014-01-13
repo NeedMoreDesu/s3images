@@ -10,6 +10,8 @@
 		AF4E302099E74E1394E20AA0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92FBA7D15FAD4521A3BD9172 /* libPods.a */; };
 		D78978D51883E17B0050A142 /* SavedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D78978D41883E17B0050A142 /* SavedImage.m */; };
 		D78978D81883E19D0050A142 /* SavedImage+custom.m in Sources */ = {isa = PBXBuildFile; fileRef = D78978D71883E19D0050A142 /* SavedImage+custom.m */; };
+		D78978DB1883FDBE0050A142 /* AWSRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B565CE188005A00094B4F1 /* AWSRuntime.framework */; };
+		D78978DC1883FDBE0050A142 /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B565CF188005A00094B4F1 /* AWSS3.framework */; };
 		D7B565BB187FD4F40094B4F1 /* NSManagedObject+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B565B8187FD4F40094B4F1 /* NSManagedObject+Helpers.m */; };
 		D7B565BC187FD4F40094B4F1 /* NSManagedObjectContext+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B565BA187FD4F40094B4F1 /* NSManagedObjectContext+Helpers.m */; };
 		D7B565BF187FD50C0094B4F1 /* CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B565BE187FD50C0094B4F1 /* CoreData.m */; };
@@ -108,6 +110,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D78978DB1883FDBE0050A142 /* AWSRuntime.framework in Frameworks */,
+				D78978DC1883FDBE0050A142 /* AWSS3.framework in Frameworks */,
 				D7CD81D7187EF1B100BA4CE1 /* XCTest.framework in Frameworks */,
 				D7CD81D9187EF1B100BA4CE1 /* UIKit.framework in Frameworks */,
 				D7CD81D8187EF1B100BA4CE1 /* Foundation.framework in Frameworks */,
@@ -548,6 +552,7 @@
 		};
 		D7CD81EA187EF1B100BA4CE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD40242EECC34E87927FB801 /* Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/s3images.app/s3images";
@@ -555,6 +560,8 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"./**",
+					/Users/dev/Documents/end06/s3images,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "s3images/s3images-Prefix.pch";
@@ -571,6 +578,7 @@
 		};
 		D7CD81EB187EF1B100BA4CE1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD40242EECC34E87927FB801 /* Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/s3images.app/s3images";
@@ -578,6 +586,8 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"./**",
+					/Users/dev/Documents/end06/s3images,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "s3images/s3images-Prefix.pch";
