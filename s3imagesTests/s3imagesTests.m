@@ -85,6 +85,12 @@
     if(savedArray.count > 0)
     {
         XCTFail(@"Finished successfylly with 0 attempts");
+        
+        SavedImage *savedImage = savedArray[0];
+        [[CoreData sharedInstance].mainMOC deleteObject:savedImage];
+        NSError *error = nil;
+        [[CoreData sharedInstance].mainMOC save:&error];
+        XCTAssertNil(error, @"Error during saving");
     }
     
 }
@@ -140,6 +146,10 @@
         XCTAssert(savedImage.url, @"No url associated with saved image");
         NSData *obtainedData = [NSData dataWithContentsOfURL:savedImage.url];
         XCTAssert([obtainedData isEqualToData:data], @"data stored on s3 is not equal to sent data");
+        [[CoreData sharedInstance].mainMOC deleteObject:savedImage];
+        NSError *error = nil;
+        [[CoreData sharedInstance].mainMOC save:&error];
+        XCTAssertNil(error, @"Error during saving");
     }
     else
     {
