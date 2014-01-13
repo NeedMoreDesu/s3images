@@ -16,11 +16,11 @@
     // Override point for customization after application launch.
     
     // Logging Control - Do NOT use logging for non-development builds.
-#ifdef DEBUG
-    [AmazonLogger verboseLogging];
-#else
-    [AmazonLogger turnLoggingOff];
-#endif
+//#ifdef DEBUG
+//    [AmazonLogger verboseLogging];
+//#else
+//    [AmazonLogger turnLoggingOff];
+//#endif
     
     [AmazonErrorHandler shouldNotThrowExceptions];
     

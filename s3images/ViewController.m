@@ -8,7 +8,10 @@
 
 #import "ViewController.h"
 #import "CoreData.h"
+
 #import "UnsavedImage.h"
+#import "SavedImage+custom.h"
+
 #import "NSManagedObject+Helpers.h"
 #import "NSManagedObjectContext+Helpers.h"
 #import "Constants.h"
@@ -24,6 +27,13 @@
 {
     [super viewDidLoad];
     blockSelf = self;
+    NSLog(@"saved images: %@", [[[CoreData sharedInstance].mainMOC
+                                fetchObjectsForEntityName:@"SavedImage"
+                                sortDescriptors:nil
+                                limit:0
+                                predicate:nil] map:^id(SavedImage *item) {
+        return [NSString stringWithFormat:@"name: %@, url: %@;", item.name, item.url];
+    }]);
     [self sendUnsavedImages:nil];
     
     if(self.s3 == nil)
@@ -34,7 +44,7 @@
                    withSecretKey:AMAZON_S3_SECRET_KEY];
         self.s3.endpoint = [AmazonEndpoints s3Endpoint:US_WEST_2];
         
-        NSLog(@"%@", [Constants pictureBucket]);
+        NSLog(@"bucket: %@", [Constants pictureBucket]);
         
         // Create the picture bucket.
         S3CreateBucketRequest *createBucketRequest = [[S3CreateBucketRequest alloc]
@@ -42,7 +52,10 @@
                                                       andRegion:[S3Region USWest2]];
         S3CreateBucketResponse *createBucketResponse = [self.s3 createBucket:createBucketRequest];
 
-        if(createBucketResponse.error != nil)
+        if(createBucketResponse.error != nil &&
+           // don't show "bucket exists" error
+           !([createBucketResponse.error.domain isEqual: @"com.amazonaws.iossdk.ServiceErrorDomain"] &&
+             createBucketResponse.error.code == 409))
         {
             NSLog(@"Error: %@", createBucketResponse.error);
         }
@@ -67,7 +80,8 @@
     [self presentViewController:elcPicker animated:NO completion:nil]; // <- animated NO because now I'm using it at program startup. May be changed later.
 }
 
--(void)printBrowserURL:(NSString*)imageName
+-(void)saveBrowserURL:(NSString*)imageName
+// must be called on backgroundMOC
 {
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
@@ -100,7 +114,21 @@
 //                // Display the URL in Safari
 //                [[UIApplication sharedApplication] openURL:url];
 //            });
-            NSLog(@"image: %@ url: %@", imageName, url);
+            [[CoreData sharedInstance].backgroundMOC performBlock:^{
+                SavedImage *image =
+                [SavedImage
+                 newObjectWithContext:[CoreData sharedInstance].backgroundMOC
+                 entity:nil];
+                image.name = imageName;
+                image.url = url;
+                
+                NSError *error = nil;
+                [[CoreData sharedInstance].backgroundMOC save:&error];
+                if (error)
+                    NSLog(@"%@", error);
+                
+                NSLog(@"saved image: %@ url: %@", imageName, url);
+            }];
         }
     });
 }
@@ -144,7 +172,7 @@
         else
         {
             NSLog(@"The image %@ was successfully uploaded.", unsavedImage.name);
-            [blockSelf printBrowserURL:unsavedImage.name];
+            [blockSelf saveBrowserURL:unsavedImage.name];
             [[CoreData sharedInstance].backgroundMOC deleteObject:unsavedImage];
             [[CoreData sharedInstance].backgroundMOC save: nil];
         }

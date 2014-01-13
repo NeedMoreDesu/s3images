@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AF4E302099E74E1394E20AA0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92FBA7D15FAD4521A3BD9172 /* libPods.a */; };
+		D78978D51883E17B0050A142 /* SavedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D78978D41883E17B0050A142 /* SavedImage.m */; };
+		D78978D81883E19D0050A142 /* SavedImage+custom.m in Sources */ = {isa = PBXBuildFile; fileRef = D78978D71883E19D0050A142 /* SavedImage+custom.m */; };
 		D7B565BB187FD4F40094B4F1 /* NSManagedObject+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B565B8187FD4F40094B4F1 /* NSManagedObject+Helpers.m */; };
 		D7B565BC187FD4F40094B4F1 /* NSManagedObjectContext+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B565BA187FD4F40094B4F1 /* NSManagedObjectContext+Helpers.m */; };
 		D7B565BF187FD50C0094B4F1 /* CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B565BE187FD50C0094B4F1 /* CoreData.m */; };
@@ -46,6 +48,10 @@
 /* Begin PBXFileReference section */
 		92FBA7D15FAD4521A3BD9172 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD40242EECC34E87927FB801 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		D78978D31883E17B0050A142 /* SavedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedImage.h; sourceTree = "<group>"; };
+		D78978D41883E17B0050A142 /* SavedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedImage.m; sourceTree = "<group>"; };
+		D78978D61883E19D0050A142 /* SavedImage+custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SavedImage+custom.h"; sourceTree = "<group>"; };
+		D78978D71883E19D0050A142 /* SavedImage+custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SavedImage+custom.m"; sourceTree = "<group>"; };
 		D7B565B7187FD4F40094B4F1 /* NSManagedObject+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+Helpers.h"; sourceTree = "<group>"; };
 		D7B565B8187FD4F40094B4F1 /* NSManagedObject+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+Helpers.m"; sourceTree = "<group>"; };
 		D7B565B9187FD4F40094B4F1 /* NSManagedObjectContext+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+Helpers.h"; sourceTree = "<group>"; };
@@ -199,6 +205,10 @@
 				D7B565CB187FDE730094B4F1 /* UnsavedImage.h */,
 				D7B565CC187FDE730094B4F1 /* UnsavedImage.m */,
 				D7CD81F6187F0ADC00BA4CE1 /* Model.xcdatamodeld */,
+				D78978D31883E17B0050A142 /* SavedImage.h */,
+				D78978D41883E17B0050A142 /* SavedImage.m */,
+				D78978D61883E19D0050A142 /* SavedImage+custom.h */,
+				D78978D71883E19D0050A142 /* SavedImage+custom.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -372,10 +382,12 @@
 				D7B565BB187FD4F40094B4F1 /* NSManagedObject+Helpers.m in Sources */,
 				D7CD81F8187F0ADC00BA4CE1 /* Model.xcdatamodeld in Sources */,
 				D7B565C2187FD99E0094B4F1 /* Constants.m in Sources */,
+				D78978D51883E17B0050A142 /* SavedImage.m in Sources */,
 				D7CD81C8187EF1B100BA4CE1 /* AppDelegate.m in Sources */,
 				D7B565BC187FD4F40094B4F1 /* NSManagedObjectContext+Helpers.m in Sources */,
 				D7CD81C4187EF1B100BA4CE1 /* main.m in Sources */,
 				D7B565CD187FDE730094B4F1 /* UnsavedImage.m in Sources */,
+				D78978D81883E19D0050A142 /* SavedImage+custom.m in Sources */,
 				D7B565BF187FD50C0094B4F1 /* CoreData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
